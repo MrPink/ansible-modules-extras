@@ -66,6 +66,9 @@ EXAMPLES = '''
       essential: true
       image: "httpd:2.4"
       memory: 300
+      environment: 
+      - name: name
+        value: simple-app
       mountPoints:
       - containerPath: /usr/local/apache2/htdocs
         sourceVolume: my-vol
