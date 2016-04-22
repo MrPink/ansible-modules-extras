@@ -28,7 +28,7 @@ options:
         description:
             - State whether the task definition should exist or be deleted
         required: true
-        choices: ['present', 'absent']
+        choices: ['present', 'absent']/usr/local/apache2/htdocs
     arn:
         description:
             - The arn of the task description to delete
@@ -66,6 +66,9 @@ EXAMPLES = '''
       essential: true
       image: "httpd:2.4"
       memory: 300
+      environment: 
+      - name: name
+        value: simple-app
       mountPoints:
       - containerPath: /usr/local/apache2/htdocs
         sourceVolume: my-vol
